@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:byte" name="vid"/>
+        <xs:element type="xs:byte" name="uid"/>
+        <xs:element type="xs:string" name="title"/>
+        <xs:element type="xs:string" name="log"/>
+        <xs:element type="xs:byte" name="status"/>
+        <xs:element type="xs:byte" name="comment"/>
+        <xs:element type="xs:byte" name="promote"/>
+        <xs:element type="xs:byte" name="sticky"/>
+        <xs:element type="xs:byte" name="nid"/>
+        <xs:element type="xs:string" name="type"/>
+        <xs:element type="xs:string" name="language"/>
+        <xs:element type="xs:int" name="created"/>
+        <xs:element type="xs:int" name="changed"/>
+        <xs:element type="xs:byte" name="tnid"/>
+        <xs:element type="xs:byte" name="translate"/>
+        <xs:element type="xs:int" name="revision_timestamp"/>
+        <xs:element type="xs:byte" name="revision_uid"/>
+        <xs:element name="body">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="und">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="item">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="value"/>
+                          <xs:element type="xs:string" name="summary"/>
+                          <xs:element type="xs:string" name="format"/>
+                          <xs:element type="xs:string" name="safe_value"/>
+                          <xs:element type="xs:string" name="safe_summary"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="is_array"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="field_tiempo_de_preparacion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="und">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="item">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="value"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="is_array"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="field_imagen">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="und">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="item">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:short" name="fid"/>
+                          <xs:element type="xs:byte" name="uid"/>
+                          <xs:element type="xs:string" name="filename"/>
+                          <xs:element type="xs:string" name="uri"/>
+                          <xs:element type="xs:string" name="filemime"/>
+                          <xs:element type="xs:short" name="filesize"/>
+                          <xs:element type="xs:byte" name="status"/>
+                          <xs:element type="xs:int" name="timestamp"/>
+                          <xs:element type="xs:string" name="rdf_mapping"/>
+                          <xs:element type="xs:string" name="alt"/>
+                          <xs:element type="xs:string" name="title"/>
+                          <xs:element type="xs:short" name="width"/>
+                          <xs:element type="xs:short" name="height"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="is_array"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="field_tipo_de_te2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="und">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="target_id"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="is_array"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rdf_mapping">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rdftype">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="item" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="is_array"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="title">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="predicates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="item"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="is_array"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="created">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="predicates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="item" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="is_array"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="datatype"/>
+                    <xs:element type="xs:string" name="callback"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="changed">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="predicates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="item"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="is_array"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="datatype"/>
+                    <xs:element type="xs:string" name="callback"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="body">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="predicates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="item"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="is_array"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="uid">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="predicates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="item"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="is_array"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="type"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="name">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="predicates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="item"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="is_array"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="comment_count">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="predicates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="item"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="is_array"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="datatype"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="last_activity">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="predicates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="item"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="is_array"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="datatype"/>
+                    <xs:element type="xs:string" name="callback"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:anyURI" name="path"/>
+        <xs:element type="xs:byte" name="cid"/>
+        <xs:element type="xs:int" name="last_comment_timestamp"/>
+        <xs:element type="xs:string" name="last_comment_name"/>
+        <xs:element type="xs:byte" name="last_comment_uid"/>
+        <xs:element type="xs:byte" name="comment_count"/>
+        <xs:element type="xs:string" name="name"/>
+        <xs:element type="xs:byte" name="picture"/>
+        <xs:element type="xs:string" name="data"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
